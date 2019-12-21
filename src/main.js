@@ -14,6 +14,10 @@ attachFastClick.attach(document.body);
 //registering 
 require("./serviceworker/registerServiceWorker");
 
+
+//subscribe user for push
+// window.subscribeUser().then(window.console.log);
+
 Vue.config.productionTip = false
 new Vue({
   render: h => h(App),

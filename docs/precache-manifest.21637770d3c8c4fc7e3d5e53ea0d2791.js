@@ -4,7 +4,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aknoon/./manifest.json"
   },
   {
-    "revision": "0cb9c8ea2276d096aa4b",
+    "revision": "f6429faa7b0805312d0f",
     "url": "/aknoon/css/app.6af8ca07.css"
   },
   {
@@ -68,12 +68,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aknoon/img/pwa-icons/safari-pinned-tab.svg"
   },
   {
-    "revision": "c0c09d85b102a3aef2b39f58c9d62400",
+    "revision": "d9df8780d7c2f830f6beb5ab00409428",
     "url": "/aknoon/index.html"
   },
   {
-    "revision": "0cb9c8ea2276d096aa4b",
-    "url": "/aknoon/js/app.c5cc74c4.js"
+    "revision": "f6429faa7b0805312d0f",
+    "url": "/aknoon/js/app.43d927f5.js"
   },
   {
     "revision": "ff5fa6df3b40bcf6fe59",

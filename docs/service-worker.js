@@ -1,13 +1,8 @@
-importScripts("/aknoon/precache-manifest.7cd46ea51926b38ac3dc52a723d0420e.js", "/aknoon/workbox-v4.3.1/workbox-sw.js");
+importScripts("/aknoon/precache-manifest.21637770d3c8c4fc7e3d5e53ea0d2791.js", "/aknoon/workbox-v4.3.1/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "/aknoon/workbox-v4.3.1"});
-
-
-workbox.setConfig({ modulePathPrefix: "/aknoon/workbox-v4.3.1", debug:false });
-
-workbox.setConfig({ modulePathPrefix: "/aknoon/workbox-v4.3.1", debug: true });
+workbox.setConfig({ modulePathPrefix: "/aknoon/workbox-v4.3.1", debug: false });
 workbox.core.skipWaiting();
 workbox.core.clientsClaim();
-
 
 workbox.precaching.precacheAndRoute([
   "/aknoon/workbox-v4.3.1/workbox-sw.js",
@@ -16,69 +11,50 @@ workbox.precaching.precacheAndRoute([
 ]);
 
 workbox.routing.registerRoute(
-  /\.[png|jpg|svg|html|js|css|json]$/,
+  /\.[png|jpg|svg|html|js|css]$/,
   new workbox.strategies.CacheFirst()
 );
-// self.addEventListener("install", function(event) {
-//   event.waitUntil(
-//     caches.open('offlinecaches').then(function(cache) {
-//       return cache.addAll(
-//         [
-//           '/aknoon/index.html'
-//         ]
-//       );
-//     })
-//   );
-// });
+workbox.routing.registerRoute(/\.json$/, new workbox.strategies.NetworkFirst());
 
-// self.addEventListener("activate", function(event) {
-//   // console.log("Service Worker activating.");
-// });
-// self.addEventListener("fetch", function(event) {
-//   event.respondWith(function(){
-//     return caches.match(event.request).then(function(response) {
-//       // console.log('response',response.text());
-//       // response.then('cacheresult',console.log);
-//         if (response) {
-//             // retrieve from cache
-//             return response;
-//         }
-//         // if not found in cache, return default offline content (only if this is a navigation request)
-//         if (event.request.mode === 'navigate') {
-//             return caches.match('/zmovies/index.html');
-//         }
+self.addEventListener("push", function(event) {
+  let data, title, options;
+  try {
+    data = event.data.json();
+    title = data.title || "Notification";
+    options = {
+      body: data.body || "Notificatioin",
+      icon: data.icon || "img/icons/logo.png",
+      badge: data.badge || "img/icons/logo.png",
+      data
+    };
 
-//         // fetch as normal
-//         return fetch(event.request);
+    if (data.tag) options.tag = data.tag;
+  }catch(e){
+    data = event.data.text();
+    title = data || "Notification";
+    options = {
+      body: data || "Notificatioin",
+      icon:  "img/icons/logo.png",
+      badge: "img/icons/logo.png",
+      data
+    };
 
-//       });
-//     });
-// });
+  }
 
-// self.addEventListener("push", function(event) {
-//   // var data = event.data.json();
-//   // const title = data.title || "Driver @ Dilivir";
-//   // const options = {
-//   //   body: data.body || "New orders",
-//   //   icon: data.icon || "img/icons/logo.png",
-//   //   badge: data.badge || "img/icons/logo.png",
-//   //   data,
-//   // };
+  const notificationPromise = self.registration.showNotification(
+    title,
+    options
+  );
+  event.waitUntil(notificationPromise);
+});
 
-//   // if (data.tag) options.tag = data.tag;
-//   // const notificationPromise = self.registration.showNotification(
-//   //   title,
-//   //   options
-//   // );
-//   // event.waitUntil(notificationPromise);
-// });
-
-// self.addEventListener("notificationclick", function(event) {
-//   // event.notification.close();
-//   // event.waitUntil(
-//   //   clients.openWindow(
-//   //     "http://localhost:5000/#/" + (event.notification.data || {}).gotourl || ""
-//   //   )
-//   // );
-// });
+self.addEventListener("notificationclick", function(event) {
+  event.notification.close();
+  console.log(event.notification.data);
+  // event.waitUntil(
+  //   clients.openWindow(
+  //     "http://localhost:5000/#/" + (event.notification.data || {}).gotourl || ""
+  //   )
+  // );
+});
 
