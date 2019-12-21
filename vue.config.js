@@ -9,7 +9,7 @@ module.exports = {
       swSrc: "./src/serviceworker/service-worker.js",
       importWorkboxFrom: "local"
     },
-    manifestPath:'./public/manifest.json',
+    manifestPath:'./manifest.json',
     themeColor: manifestJSON.theme_color,
     name: manifestJSON.short_name,
     msTileColor: manifestJSON.background_color,

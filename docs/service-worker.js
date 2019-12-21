@@ -1,4 +1,4 @@
-importScripts("/aknoon/precache-manifest.e8f773464f327529c75ac3f54352f261.js", "/aknoon/workbox-v4.3.1/workbox-sw.js");
+importScripts("/aknoon/precache-manifest.7cd46ea51926b38ac3dc52a723d0420e.js", "/aknoon/workbox-v4.3.1/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "/aknoon/workbox-v4.3.1"});
 self.addEventListener("install", function(event) {
   event.waitUntil(
@@ -15,26 +15,26 @@ self.addEventListener("install", function(event) {
 self.addEventListener("activate", function(event) {
   // console.log("Service Worker activating.");
 });
-// self.addEventListener("fetch", function(event) {
-//   event.respondWith(function(){
-//     return caches.match(event.request).then(function(response) {
-//       // console.log('response',response.text());
-//       // response.then('cacheresult',console.log);
-//         if (response) {
-//             // retrieve from cache
-//             return response;
-//         }
-//         // if not found in cache, return default offline content (only if this is a navigation request)
-//         if (event.request.mode === 'navigate') {
-//             return caches.match('/zmovies/index.html');
-//         }
+self.addEventListener("fetch", function(event) {
+  event.respondWith(function(){
+    return caches.match(event.request).then(function(response) {
+      // console.log('response',response.text());
+      // response.then('cacheresult',console.log);
+        if (response) {
+            // retrieve from cache
+            return response;
+        }
+        // if not found in cache, return default offline content (only if this is a navigation request)
+        if (event.request.mode === 'navigate') {
+            return caches.match('/aknoon/index.html');
+        }
 
-//         // fetch as normal
-//         return fetch(event.request);
+        // fetch as normal
+        return fetch(event.request);
 
-//       });
-//     });
-// });
+      });
+    });
+});
 
 self.addEventListener("push", function(event) {
   // var data = event.data.json();
