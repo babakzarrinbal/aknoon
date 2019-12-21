@@ -3,7 +3,7 @@ self.addEventListener("install", function(event) {
     caches.open('offlinecaches').then(function(cache) {
       return cache.addAll(
         [
-          '/zmovies/index.html'
+          '/aknoon/index.html'
         ]
       );
     })
@@ -35,28 +35,28 @@ self.addEventListener("activate", function(event) {
 // });
 
 self.addEventListener("push", function(event) {
-  var data = event.data.json();
-  const title = data.title || "Driver @ Dilivir";
-  const options = {
-    body: data.body || "New orders",
-    icon: data.icon || "img/icons/logo.png",
-    badge: data.badge || "img/icons/logo.png",
-    data,
-  };
+  // var data = event.data.json();
+  // const title = data.title || "Driver @ Dilivir";
+  // const options = {
+  //   body: data.body || "New orders",
+  //   icon: data.icon || "img/icons/logo.png",
+  //   badge: data.badge || "img/icons/logo.png",
+  //   data,
+  // };
 
-  if (data.tag) options.tag = data.tag;
-  const notificationPromise = self.registration.showNotification(
-    title,
-    options
-  );
-  event.waitUntil(notificationPromise);
+  // if (data.tag) options.tag = data.tag;
+  // const notificationPromise = self.registration.showNotification(
+  //   title,
+  //   options
+  // );
+  // event.waitUntil(notificationPromise);
 });
 
 self.addEventListener("notificationclick", function(event) {
-  event.notification.close();
-  event.waitUntil(
-    clients.openWindow(
-      "http://localhost:5000/#/" + (event.notification.data || {}).gotourl || ""
-    )
-  );
+  // event.notification.close();
+  // event.waitUntil(
+  //   clients.openWindow(
+  //     "http://localhost:5000/#/" + (event.notification.data || {}).gotourl || ""
+  //   )
+  // );
 });

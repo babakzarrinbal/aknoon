@@ -1,65 +1,34 @@
-importScripts("/aknoon/precache-manifest.c41dc93e979849415350e2407ea059e4.js", "/aknoon/workbox-v4.3.1/workbox-sw.js");
-workbox.setConfig({modulePathPrefix: "/aknoon/workbox-v4.3.1"});
-self.addEventListener("install", function(event) {
-  event.waitUntil(
-    caches.open('offlinecaches').then(function(cache) {
-      return cache.addAll(
-        [
-          '/zmovies/index.html'
-        ]
-      );
-    })
-  );
+/**
+ * Welcome to your Workbox-powered service worker!
+ *
+ * You'll need to register this file in your web app and you should
+ * disable HTTP caching for this file too.
+ * See https://goo.gl/nhQhGp
+ *
+ * The rest of the code is auto-generated. Please don't update this file
+ * directly; instead, make changes to your Workbox build configuration
+ * and re-run your build process.
+ * See https://goo.gl/2aRDsh
+ */
+
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+
+importScripts(
+  "/aknoon/precache-manifest.3931604464b546f1716d6ecd9f12a121.js"
+);
+
+workbox.core.setCacheNameDetails({prefix: "aknoon"});
+
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
 });
 
-self.addEventListener("activate", function(event) {
-  // console.log("Service Worker activating.");
-});
-// self.addEventListener("fetch", function(event) {
-//   event.respondWith(function(){
-//     return caches.match(event.request).then(function(response) {
-//       // console.log('response',response.text());
-//       // response.then('cacheresult',console.log);
-//         if (response) {
-//             // retrieve from cache
-//             return response;
-//         }
-//         // if not found in cache, return default offline content (only if this is a navigation request)
-//         if (event.request.mode === 'navigate') {
-//             return caches.match('/zmovies/index.html');
-//         }
-
-//         // fetch as normal
-//         return fetch(event.request);
-
-//       });
-//     });
-// });
-
-self.addEventListener("push", function(event) {
-  var data = event.data.json();
-  const title = data.title || "Driver @ Dilivir";
-  const options = {
-    body: data.body || "New orders",
-    icon: data.icon || "img/icons/logo.png",
-    badge: data.badge || "img/icons/logo.png",
-    data,
-  };
-
-  if (data.tag) options.tag = data.tag;
-  const notificationPromise = self.registration.showNotification(
-    title,
-    options
-  );
-  event.waitUntil(notificationPromise);
-});
-
-self.addEventListener("notificationclick", function(event) {
-  event.notification.close();
-  event.waitUntil(
-    clients.openWindow(
-      "http://localhost:5000/#/" + (event.notification.data || {}).gotourl || ""
-    )
-  );
-});
-
+/**
+ * The workboxSW.precacheAndRoute() method efficiently caches and responds to
+ * requests for URLs in the manifest.
+ * See https://goo.gl/S9QRab
+ */
+self.__precacheManifest = [].concat(self.__precacheManifest || []);
+workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
