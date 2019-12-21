@@ -1,4 +1,4 @@
-importScripts("/aknoon/precache-manifest.80a59f8f11ea5ba67c23de9266b81653.js", "/aknoon/workbox-v4.3.1/workbox-sw.js");
+importScripts("/aknoon/precache-manifest.e8f773464f327529c75ac3f54352f261.js", "/aknoon/workbox-v4.3.1/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "/aknoon/workbox-v4.3.1"});
 self.addEventListener("install", function(event) {
   event.waitUntil(
