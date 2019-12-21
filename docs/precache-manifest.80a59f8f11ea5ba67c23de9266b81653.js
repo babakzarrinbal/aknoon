@@ -1,6 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4af56dc6e89f09206c68",
+    "revision": "cf2fd4acc6bec3eeee1210fc981639a2",
+    "url": "/aknoon/./public/manifest.json"
+  },
+  {
+    "revision": "cb7e64a6664f40829962",
     "url": "/aknoon/css/app.e2713bb0.css"
   },
   {
@@ -64,19 +68,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aknoon/img/pwa-icons/safari-pinned-tab.svg"
   },
   {
-    "revision": "bcbe7639a7d4fa0c45a0ecbb2a8fa299",
+    "revision": "90793915f2c1f3bf6641b43f0c2389cc",
     "url": "/aknoon/index.html"
   },
   {
-    "revision": "4af56dc6e89f09206c68",
-    "url": "/aknoon/js/app.43acee7b.js"
+    "revision": "cb7e64a6664f40829962",
+    "url": "/aknoon/js/app.2faa6de5.js"
   },
   {
     "revision": "ff5fa6df3b40bcf6fe59",
     "url": "/aknoon/js/chunk-vendors.86878b57.js"
   },
   {
-    "revision": "423edbbf9ccb0e1b440ee275a4aae16f",
+    "revision": "32d6c1445ec9b5ebe8e2c3336fe4fcff",
     "url": "/aknoon/manifest.json"
   },
   {
