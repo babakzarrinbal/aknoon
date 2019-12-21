@@ -2,11 +2,19 @@
 
 workbox.setConfig({ modulePathPrefix: "/aknoon/workbox-v4.3.1", debug:false });
 
-workbox.precaching.precacheAndRoute(
-  self.__precacheManifest
-);
+workbox.setConfig({ modulePathPrefix: "/aknoon/workbox-v4.3.1", debug: true });
+workbox.core.skipWaiting();
+workbox.core.clientsClaim();
+
+
+workbox.precaching.precacheAndRoute([
+  "/aknoon/workbox-v4.3.1/workbox-sw.js",
+  "/aknoon/service-worker.js",
+  ...self.__precacheManifest.map(i => i.url)
+]);
+
 workbox.routing.registerRoute(
-  new RegExp('\\.[png|jpg|svg|html|js|css]$'),
+  /\.[png|jpg|svg|html|js|css|json]$/,
   new workbox.strategies.CacheFirst()
 );
 // self.addEventListener("install", function(event) {
