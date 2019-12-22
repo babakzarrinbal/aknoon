@@ -34,7 +34,7 @@ export default {
   data() {
     let shows = [...Array(100).keys()].map(i => ({
       category: ["رخدادها", "کودک و نوجوان", "کمدی", "بزرگسال"][i % 4],
-      img: "/img/temps/" + (i % 5) + ".jpg",
+      img: "img/temps/" + (i % 5) + ".jpg",
       title: "تست",
       writer: "تست",
       director: "تست",
