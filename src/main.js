@@ -1,18 +1,20 @@
 import Vue from 'vue'
 import App from './App.vue'
-import './registerServiceWorker'
+//registering service worker
+require("./serviceworker/registerServiceWorker");
 
 
 
 // bootstrap css
 import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/js/bootstrap.min.js";
 
+import "./styles/overall.scss"
 // fast click to disable touch delay
 var attachFastClick = require("fastclick");
 attachFastClick.attach(document.body);
 
-//registering 
-require("./serviceworker/registerServiceWorker");
+
 
 
 //subscribe user for push

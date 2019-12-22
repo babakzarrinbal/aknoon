@@ -1,5 +1,5 @@
 var manifestJSON = require("./public/manifest.json");
-
+const webpack = require('webpack');
 // pwaArgs = {};
 module.exports = {
   productionSourceMap: false,
@@ -20,6 +20,14 @@ module.exports = {
       maskIcon: "img/pwa-icons/safari-pinned-tab.svg",
       msTileImage: "img/pwa-icons/msapplication-icon-144x144.png"
     },
+  },
+  configureWebpack:{
+    plugins: [
+      new webpack.IgnorePlugin({
+        resourceRegExp: /^\.\/locale$/,
+        contextRegExp: /moment$/
+      })
+    ]
   },
   outputDir: "docs",
   publicPath: "/aknoon/"

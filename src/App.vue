@@ -1,29 +1,42 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    test app
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+  <div id="app" class="container">
+    <Header />
+    <Slider />
+    <div class="container">
+    <Booking/>
+    <Listing/>
+    </div>
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+import Slider from './components/slider.vue'
+import Header from './components/header.vue'
+import Booking from './components/booking.vue'
+import Listing from './components/listing.vue'
 
 export default {
   name: 'app',
   components: {
-    // HelloWorld
+    Slider,
+    Header,
+    Booking,
+    Listing
   }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'IranSans';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background-color: #2b2b2b;
+}
+/deep/ .clickable{
+  user-select: none;
+  cursor: pointer;
+  
 }
 </style>
