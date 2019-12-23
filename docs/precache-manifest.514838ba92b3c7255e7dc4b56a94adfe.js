@@ -4,8 +4,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aknoon/./manifest.json"
   },
   {
-    "revision": "4b50a4bffe11d708b27b",
-    "url": "/aknoon/css/app.b3691801.css"
+    "revision": "bf16f1e795a9a9b5baef",
+    "url": "/aknoon/css/app.d4fe606e.css"
   },
   {
     "revision": "bc31d8c58824f1d03ee2",
@@ -156,12 +156,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aknoon/img/temps/i-5.jpg"
   },
   {
-    "revision": "b8e12e6b341d078680a7878fa2390225",
+    "revision": "799452558ccd15cb90ad1ddeb50ebca2",
     "url": "/aknoon/index.html"
   },
   {
-    "revision": "4b50a4bffe11d708b27b",
-    "url": "/aknoon/js/app.0fdf92cd.js"
+    "revision": "bf16f1e795a9a9b5baef",
+    "url": "/aknoon/js/app.03f9ed3d.js"
   },
   {
     "revision": "bc31d8c58824f1d03ee2",

@@ -5,6 +5,9 @@
     <div class="container">
     <Booking/>
     <Listing/>
+    <div class="banner">
+      <img src="img/temps/banner.jpg" style="width:500px;max-width:100%;" alt="">
+    </div>
     </div>
   </div>
 </template>
