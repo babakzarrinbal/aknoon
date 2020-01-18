@@ -1,9 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
+import router from "./router";
 //registering service worker
 require("./serviceworker/registerServiceWorker");
-
-
 
 // bootstrap css
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -14,13 +13,11 @@ import "./styles/overall.scss"
 var attachFastClick = require("fastclick");
 attachFastClick.attach(document.body);
 
-
-
-
 //subscribe user for push
 // window.subscribeUser().then(window.console.log);
 
 Vue.config.productionTip = false
 new Vue({
+  router,
   render: h => h(App),
 }).$mount('#app')
