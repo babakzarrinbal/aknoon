@@ -4,11 +4,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aknoon/./manifest.json"
   },
   {
-    "revision": "ea87341df2db1276c39e",
-    "url": "/aknoon/css/app.3297eb46.css"
+    "revision": "1b01d24b17a5387732ac",
+    "url": "/aknoon/css/app.7f0a6a3c.css"
   },
   {
-    "revision": "bc31d8c58824f1d03ee2",
+    "revision": "84ae3294f0ebbaef5429",
     "url": "/aknoon/css/chunk-vendors.f6f30965.css"
   },
   {
@@ -136,6 +136,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aknoon/img/temps/banner.jpg"
   },
   {
+    "revision": "1383c8df432d54f7478db71b2d04eaa7",
+    "url": "/aknoon/img/temps/detail-banner.jpg"
+  },
+  {
+    "revision": "7a446e5acb5396e5af71ec686da6d425",
+    "url": "/aknoon/img/temps/detail-img1.jpg"
+  },
+  {
+    "revision": "a3c83e48b995152c7e24eed12237026d",
+    "url": "/aknoon/img/temps/detail-img2.jpg"
+  },
+  {
     "revision": "3d1bea2ead09969cfd9d8b792e4ffa55",
     "url": "/aknoon/img/temps/i-1.jpg"
   },
@@ -156,16 +168,32 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aknoon/img/temps/i-5.jpg"
   },
   {
-    "revision": "5fb217ba74729ba1238292a2130c6b65",
+    "revision": "a7f63cc4f6228e29a8b3edf60c8b8308",
+    "url": "/aknoon/img/temps/media1.jpg"
+  },
+  {
+    "revision": "e802becc1a6ee10b0f8b0cc12c0015bd",
+    "url": "/aknoon/img/temps/media2.jpg"
+  },
+  {
+    "revision": "5b89c4c6796865431facfff270d966a0",
+    "url": "/aknoon/img/temps/media3.jpg"
+  },
+  {
+    "revision": "772f7da1f8ffa679a779d1bbb8476ea3",
+    "url": "/aknoon/img/temps/media4.png"
+  },
+  {
+    "revision": "0176c844dc80553a2cd5b69a50abd2c4",
     "url": "/aknoon/index.html"
   },
   {
-    "revision": "ea87341df2db1276c39e",
-    "url": "/aknoon/js/app.6c243af6.js"
+    "revision": "1b01d24b17a5387732ac",
+    "url": "/aknoon/js/app.253e2539.js"
   },
   {
-    "revision": "bc31d8c58824f1d03ee2",
-    "url": "/aknoon/js/chunk-vendors.e8c6c459.js"
+    "revision": "84ae3294f0ebbaef5429",
+    "url": "/aknoon/js/chunk-vendors.a14707bf.js"
   },
   {
     "revision": "32d6c1445ec9b5ebe8e2c3336fe4fcff",

@@ -1,4 +1,4 @@
-importScripts("/aknoon/precache-manifest.9d2febf78855349042713ba34f941c21.js", "/aknoon/workbox-v4.3.1/workbox-sw.js");
+importScripts("/aknoon/precache-manifest.0bd724bb54fcd9834468c170e92bed25.js", "/aknoon/workbox-v4.3.1/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "/aknoon/workbox-v4.3.1"});
 workbox.setConfig({ modulePathPrefix: "/aknoon/workbox-v4.3.1", debug: false });
 workbox.core.skipWaiting();
@@ -50,7 +50,7 @@ self.addEventListener("push", function(event) {
 
 self.addEventListener("notificationclick", function(event) {
   event.notification.close();
-  console.log(event.notification.data);
+  // console.log(event.notification.data);
   // event.waitUntil(
   //   clients.openWindow(
   //     "http://localhost:5000/#/" + (event.notification.data || {}).gotourl || ""

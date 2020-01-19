@@ -1,24 +1,42 @@
 @font-face {
   font-family: "IranSans";
-  src: url("./fonts/iransans/IRANSansWeb.woff") format('woff');
+  src: url("./fonts/iransans/IRANSansWeb.woff") format("woff");
 }
 
 @font-face {
   font-family: "IranSansMedium";
-  src: url("./fonts/iransans/IRANSansWeb_Medium.woff") format('woff');
+  src: url("./fonts/iransans/IRANSansWeb_Medium.woff") format("woff");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "IranSansBold";
-  src: url("./fonts/iransans/IRANSansWeb_Bold.woff") format('woff');
+  src: url("./fonts/iransans/IRANSansWeb_Bold.woff") format("woff");
   font-weight: bold;
 }
 @font-face {
   font-family: "IranSansNumbers";
-  src: url("./fonts/iransans/IRANSansWeb(FaNum).woff2") format('woff2');
+  src: url("./fonts/iransans/IRANSansWeb(FaNum).woff2") format("woff2");
   font-weight: bold;
 }
-body{
+body {
   background-color: #0e0e0e;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.clickable {
+  user-select: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+    &.raise {
+      transform: translateY(-2px);
+      text-shadow: gray 0 9px 3px;
+    }
+  }
 }

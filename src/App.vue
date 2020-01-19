@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import LayoutFirst from "@/layouts/First.vue";
+import LayoutFirst from "./layouts/First/Index";
 
 export default {
   name: "app",
@@ -12,11 +12,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss" scoped>
-
-/deep/ .clickable {
-  user-select: none;
-  cursor: pointer;
-}
-</style>

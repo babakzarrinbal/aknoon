@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid d-flex flex-row-reverse footer">
+  <div class="container-fluid d-flex footer" >
     <div class="pics d-flex ">
       <img src="" class="footerpics"  alt="">
       <img src="" class="footerpics"  alt="">
@@ -15,7 +15,9 @@
     </div>
     <div class="sec contact d-flex flex-column">
       <h4>راه‌های ارتباطی</h4>
-      <span v-for="(v,i) in ['کبوتر نامه بر','موبایل','نامه','ایمیل']" :key="i">{{ v}}</span>
+      <router-link to="/contactus" class="clickable raise">تماس با ما</router-link>
+      <router-link to="/aboutus" class="clickable raise">درباره ما</router-link>
+      <!-- <a v-for="(v,i) in ['کبوتر نامه بر','موبایل','نامه','ایمیل']" style="color:white; text-decoration:none;" class="clickable" :key="i">{{ v}}</a> -->
     </div>
   </div>
 </template>
@@ -29,6 +31,11 @@ export default {
 <style lang="scss" scoped>
 .footer{
   color:white;
+  background-color: #2b2b2b;
+  flex-direction: column-reverse;
+  @media (min-width:768px) {
+    flex-direction: row !important;
+  }
   h4{
     color:#f3c10f
   }
@@ -38,7 +45,15 @@ export default {
       border-radius: 12px;
       margin:8px;
       width:70px;
-      height:70px
+      height:70px;
+      @media(min-width: 768px) {
+        width:50px;
+        height:50px;
+      }
+      @media(min-width: 990px) {
+        width:70px;
+        height:70px;
+      }
     }
     
   }

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container" style="background-color:#2b2b2b">
     <Slider />
     <div class="container">
       <Booking />
