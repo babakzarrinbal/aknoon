@@ -1,0 +1,24 @@
+.slideup-enter-active, .slideup-leave-active {
+  transition:  .8s;
+  .main,.sbbg{
+    transition:  cubic-bezier(0.77,0,0.175,1) .7s .05s;
+
+  }
+  .slidebar{
+    transition:  cubic-bezier(0.77,0,0.175,1) .7s .05s;
+
+  }
+}
+.slideup-enter, .slideup-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  .main{
+    transform: translateY(-100%);
+  }
+  .sbbg{
+    transform: translateY(100%);
+
+  }
+  .slidebar{
+    transform: translateX(100%);
+  }
+}
+

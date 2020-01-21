@@ -13,6 +13,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import "bootstrap/dist/js/bootstrap.min.js";
 
 import "./styles/overall.scss"
+import "./styles/transitions.scss"
 // fast click to disable touch delay
 var attachFastClick = require("fastclick");
 attachFastClick.attach(document.body);
