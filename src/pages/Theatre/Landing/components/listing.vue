@@ -16,7 +16,7 @@
             <div class="front">
               <img :src="s.img" alt="Avatar" style="width:100%;height:100%;" />
             </div>
-            <div class="back d-flex flex-column">
+            <router-link tag="div" to="theatre/shows/1" class="back d-flex flex-column">
               <div class="showinfo">
                 <span class="text-center text">{{s.title}}</span>
                 <img class="shimg" src="img/temps/i-1.jpg" alt="">
@@ -66,7 +66,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </router-link>
           </div>
         </div>
       </div>

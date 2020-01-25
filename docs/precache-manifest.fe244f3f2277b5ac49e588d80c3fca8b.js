@@ -4,8 +4,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aknoon/./manifest.json"
   },
   {
-    "revision": "9cd79e33ea3a6d9361b6",
-    "url": "/aknoon/css/app.55f4bc80.css"
+    "revision": "f4233eec6b9ad01ebfe6",
+    "url": "/aknoon/css/app.56a9b0c9.css"
   },
   {
     "revision": "ab21e2af77edd2e9b1e7",
@@ -132,6 +132,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aknoon/img/temps/4.jpg"
   },
   {
+    "revision": "fc8ebf231d49105a02193728c6738791",
+    "url": "/aknoon/img/temps/banner-ad1.jpg"
+  },
+  {
+    "revision": "9cedf42a7285f1f6731fa4ff52dcb8de",
+    "url": "/aknoon/img/temps/banner-ad2.jpg"
+  },
+  {
+    "revision": "08df1fab20a337167d897ffdcb253867",
+    "url": "/aknoon/img/temps/banner-ad3.jpg"
+  },
+  {
     "revision": "bd56676c73fc3f1b38ebb3bd1fd8e328",
     "url": "/aknoon/img/temps/banner.jpg"
   },
@@ -146,6 +158,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a3c83e48b995152c7e24eed12237026d",
     "url": "/aknoon/img/temps/detail-img2.jpg"
+  },
+  {
+    "revision": "0521236f5f321036d9ca88398567a776",
+    "url": "/aknoon/img/temps/detail-map.png"
+  },
+  {
+    "revision": "f1c5d518dbec53a59ce2da0355c51480",
+    "url": "/aknoon/img/temps/detail-video.png"
   },
   {
     "revision": "3d1bea2ead09969cfd9d8b792e4ffa55",
@@ -188,16 +208,32 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aknoon/img/temps/media4.png"
   },
   {
+    "revision": "80406200cd88f5bc2f2e234783fb389c",
+    "url": "/aknoon/img/temps/photo.svg"
+  },
+  {
+    "revision": "c01a5d30b1347aace51c40b0d2d1324e",
+    "url": "/aknoon/img/temps/play.svg"
+  },
+  {
+    "revision": "49dfdf551d15d96d85e676e9ef6d3c43",
+    "url": "/aknoon/img/temps/show-banner.jpg"
+  },
+  {
+    "revision": "a54389fbc5c4dee063c8ec8824d0725a",
+    "url": "/aknoon/img/temps/show-poster.jpg"
+  },
+  {
     "revision": "c463472305063005f6cda1b1e6bf42e1",
     "url": "/aknoon/img/temps/vabg.jpg"
   },
   {
-    "revision": "e9aa6bddb576d50df8ad59ff27a39c6d",
+    "revision": "659fe0b7af7ce12aaac052e90c7df982",
     "url": "/aknoon/index.html"
   },
   {
-    "revision": "9cd79e33ea3a6d9361b6",
-    "url": "/aknoon/js/app.80ea867d.js"
+    "revision": "f4233eec6b9ad01ebfe6",
+    "url": "/aknoon/js/app.b05d5585.js"
   },
   {
     "revision": "ab21e2af77edd2e9b1e7",

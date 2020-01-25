@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="56" viewBox="0 0 56 56">
+  <defs>
+    <circle id="photo-b" cx="25" cy="25" r="25"/>
+    <filter id="photo-a" width="122%" height="122%" x="-11%" y="-7%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="1.5"/>
+      <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0"/>
+    </filter>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(3 1)">
+    <g fill-rule="nonzero">
+      <use fill="#000" filter="url(#photo-a)" xlink:href="#photo-b"/>
+      <use fill="#FFF" fill-opacity=".6" fill-rule="evenodd" xlink:href="#photo-b"/>
+    </g>
+    <path fill="#000" d="M18,17 L18,15 L32,15 L32,17 L38,17 L38,35 L12,35 L12,17 L18,17 Z M25,31 C27.7614237,31 30,28.7614237 30,26 C30,23.2385763 27.7614237,21 25,21 C22.2385763,21 20,23.2385763 20,26 C20,28.7614237 22.2385763,31 25,31 Z M33,20.5384615 C33,19.6923077 33.703125,19 34.5625,19 C35.421875,19 36.125,19.6923077 36.125,20.5384615 C36.125,21.3846154 35.421875,22.0769231 34.5625,22.0769231 C33.703125,22.0769231 33,21.3846154 33,20.5384615 L33,20.5384615 Z" opacity=".8"/>
+  </g>
+</svg>

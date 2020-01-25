@@ -6,7 +6,7 @@
     <div class="inputcontainer qty">
       <input type="number" min="0" class="py-1" placeholder="تعداد بلیط" />
     </div>
-    <div class="inputcontainer">
+    <div class="inputcontainer" style="color:initial;">
       <DatePicker placeholder="تاریخ" />
     </div>
     <div class="inputcontainer">
