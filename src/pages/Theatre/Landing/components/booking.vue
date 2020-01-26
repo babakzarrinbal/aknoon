@@ -1,18 +1,18 @@
 <template>
   <div class="booking d-flex flex-row-reverse mt-4">
     <div class="inputcontainer">
-      <input type="search" placeholder="کل اجراها" />
+      <input type="search" v-model="show.name" placeholder="نام اجرا" />
     </div>
     <div class="inputcontainer qty">
-      <input type="number" min="0" class="py-1" placeholder="تعداد بلیط" />
+      <input type="number" min="0" v-model="show.qty" class="py-1" placeholder="تعداد بلیط" />
     </div>
     <div class="inputcontainer" style="color:initial;">
-      <DatePicker placeholder="تاریخ" />
+      <DatePicker v-model="show.date" placeholder="تاریخ" />
     </div>
     <div class="inputcontainer">
-      <DatePicker type="time" placeholder="زمان اجرا" />
+      <DatePicker type="time" v-model="show.time" placeholder="زمان اجرا" />
     </div>
-    <div class="inputcontainer">
+    <div class="inputcontainer" @click="buyticket()">
       <div class="applybtn py-3" >خرید بلیط</div>
     </div>
   </div>
@@ -21,8 +21,23 @@
 <script>
 import DatePicker from "vue-persian-datetime-picker";
 export default {
+  data(){
+return {
+  show:{
+    name:null,
+    data:null,
+    qty:null,
+    time:null
+  }
+}
+  },  
   components: {
     DatePicker
+  },
+  methods:{
+    buyticket(){
+      window.alert(JSON.stringify(this.show))
+    }
   }
 };
 </script>

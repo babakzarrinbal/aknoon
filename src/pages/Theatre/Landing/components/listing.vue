@@ -7,7 +7,7 @@
           :class="{'active': sc ==activeCat}"
           v-for="(sc,i) in showCats"
           :key="i"
-          @click="activeCat =sc;visibleshows = (i ==showCats.length-1) ?[...shows]:shows.filter(s=>s.category == sc)"
+          @click="activeCat =sc"
         >{{sc}}</div>
       </div>
       <div class="shows">
@@ -16,7 +16,7 @@
             <div class="front">
               <img :src="s.img" alt="Avatar" style="width:100%;height:100%;" />
             </div>
-            <router-link tag="div" to="theatre/shows/1" class="back d-flex flex-column">
+            <router-link tag="div" :to="'theatre/shows/'+s.id" class="back d-flex flex-column">
               <div class="showinfo">
                 <span class="text-center text">{{s.title}}</span>
                 <img class="shimg" src="img/temps/i-1.jpg" alt="">
@@ -77,32 +77,34 @@
 
 <script>
 export default {
+  props:{
+    shows:Array
+  },
   data() {
-    let shows = [...Array(100).keys()].map(i => ({
-      category: ["رخدادها", "کودک و نوجوان", "کمدی", "بزرگسال"][i % 4],
-      img: "img/temps/" + (i % 5) + ".jpg",
-      title: "تست",
-      writer: "تست",
-      director: "تست",
-      place: "تست",
-      datetime: "1399/1/1 8:30",
-      rate1: "7.1",
-      rate2: "1.1",
-      rate3: "5.4"
-    }));
-    let showCats = shows.reduce(
-      (cu, c) => (cu.includes(c.category) ? cu : [c.category, ...cu]),
-      ["همه اجراها"]
-    );
-    let visibleshows = shows.filter(s => s.category == showCats[0]);
-    let activeCat = showCats[0];
+    
     return {
-      shows,
-      showCats,
-      visibleshows,
-      activeCat,
+      activeCat: "همه اجراها",
       showall: false
     };
+  },
+  computed:{
+    showCats(){
+      return this.shows.reduce(
+      (cu, show) =>{ 
+        show.categories.forEach(c => {
+          if(cu.includes(c))return;
+          cu.push(c);
+        });
+
+        return cu;
+        },
+      ["همه اجراها"]
+    )
+    },
+    visibleshows(){
+      if(this.activeCat == 'همه اجراها')return {...this.shows}
+      return this.shows.filter(s => s.categories.some(c=>c==this.activeCat) );
+    }
   }
 };
 </script>

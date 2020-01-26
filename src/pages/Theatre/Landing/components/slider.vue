@@ -1,6 +1,6 @@
 <template>
   <div class="w-100 p-0" style="margin-left:-15px;margin-right:-15px;width: calc(100% + 30px) !important;">
-    <vue-flux :options="vfOptions" :images="vfImages" :transitions="vfTransitions" ref="slider">
+    <vue-flux :options="vfOptions" :images="images" :transitions="vfTransitions" ref="slider">
       <template v-slot:preloader>
         <flux-preloader />
       </template>
@@ -24,18 +24,17 @@ export default {
     FluxPagination,
     FluxPreloader
   },
-
+  props:{
+    images:Array,
+  },
   data: () => ({
     vfOptions: {
       autoplay: true
     },
-    vfImages: [
-      "https://deulos.github.io/vue-flux-docs/img/slides/01.jpg",
-      "https://deulos.github.io/vue-flux-docs/img/slides/02.jpg",
-      "https://deulos.github.io/vue-flux-docs/img/slides/03.jpg"
-    ],
     vfTransitions: [
-      // "fade", "cube", "book",
+      // "fade", 
+      "cube",
+      //  "book",
       "wave"
     ],
   })
