@@ -2,6 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import TeatherLanding from "./pages/Theatre/Landing/Index.vue";
 import ShowDetail from "./pages/Theatre/Show/Index.vue";
+import StageDetail from "./pages/Theatre/Stage/Index.vue";
 import VisualArtLanding from "./pages/VisualArt/Landing/Index.vue";
 import Home from "./pages/Home/Index.vue";
 import Media from "./pages/Media/List/Index.vue";
@@ -32,6 +33,12 @@ var router = new Router({
       path: "/theatre/shows/:id",
       name: "ShowDetail",
       component: ShowDetail,
+      // meta: { mainindex: 1, keepAlive: true }
+    },
+    {
+      path: "/theatre/stages/:id",
+      name: "StageDetail",
+      component: StageDetail,
       // meta: { mainindex: 1, keepAlive: true }
     },
     {

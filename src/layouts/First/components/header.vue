@@ -56,7 +56,8 @@ export default {
         { title: "اجراها", link: "/play/list" },
         // { title: "پلاتوها", link: "/plato/list" },
         { title: "مولتی مدیا", link: "/media" },
-        // { title: "پادکست‌ها", link: "/medias/podcasts" },
+        { title: "جزئیات نمایش", link: "/theatre/shows/1" },
+        { title: "جزئیات سالن", link: "/theatre/stages/1" },
         // { title: "ویدئو", link: "/medias/videos" },
         // { title: "تصاویر", link: "/medias/pics" },
       ]

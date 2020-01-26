@@ -4,8 +4,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aknoon/./manifest.json"
   },
   {
-    "revision": "f4233eec6b9ad01ebfe6",
-    "url": "/aknoon/css/app.56a9b0c9.css"
+    "revision": "3d2a2c293ba533d9008b",
+    "url": "/aknoon/css/app.e375065a.css"
   },
   {
     "revision": "ab21e2af77edd2e9b1e7",
@@ -148,6 +148,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aknoon/img/temps/banner.jpg"
   },
   {
+    "revision": "313b77aa2a4fab25f027fdd609840d3a",
+    "url": "/aknoon/img/temps/currentlyplaying.jpg"
+  },
+  {
     "revision": "1383c8df432d54f7478db71b2d04eaa7",
     "url": "/aknoon/img/temps/detail-banner.jpg"
   },
@@ -216,6 +220,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aknoon/img/temps/play.svg"
   },
   {
+    "revision": "202e8630e7a3a2575adc1c9643aa5a5f",
+    "url": "/aknoon/img/temps/show-actor.jpg"
+  },
+  {
     "revision": "49dfdf551d15d96d85e676e9ef6d3c43",
     "url": "/aknoon/img/temps/show-banner.jpg"
   },
@@ -224,16 +232,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aknoon/img/temps/show-poster.jpg"
   },
   {
+    "revision": "4ac36b997cd1d370dcd8e140486a6e0c",
+    "url": "/aknoon/img/temps/show-related.jpg"
+  },
+  {
     "revision": "c463472305063005f6cda1b1e6bf42e1",
     "url": "/aknoon/img/temps/vabg.jpg"
   },
   {
-    "revision": "659fe0b7af7ce12aaac052e90c7df982",
+    "revision": "9fdce6f494d931fa311998317f94fb72",
     "url": "/aknoon/index.html"
   },
   {
-    "revision": "f4233eec6b9ad01ebfe6",
-    "url": "/aknoon/js/app.b05d5585.js"
+    "revision": "3d2a2c293ba533d9008b",
+    "url": "/aknoon/js/app.4ab47cf8.js"
   },
   {
     "revision": "ab21e2af77edd2e9b1e7",

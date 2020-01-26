@@ -8,7 +8,7 @@
         <img src="img/temps/banner.jpg" style="width:500px;max-width:100%;" alt />
       </div>
     </div>
-    <Listing2 />
+    <Listing2 class="text-dark"/>
   </div>
 </template>
 

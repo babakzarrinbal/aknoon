@@ -92,10 +92,13 @@
         </div>
       </div>
       <div
-        class="main mt-3 border-top d-flex flex-row-reverse container"
+        class="main mt-3 border-top d-flex flex-row-reverse container border-bottom"
         style="border-color:#eee;"
       >
-        <div class="sidebar flex-shrink-0  px-4 border-left p-2" style="border-color:#eee;width:250px;">
+        <div
+          class="sidebar flex-shrink-0 px-4 border-left p-2"
+          style="border-color:#eee;width:250px;"
+        >
           <div class="video text-right pb-4">
             <h5>&#8249; ویدئو</h5>
             <img src="img/temps/detail-video.png" alt />
@@ -117,7 +120,7 @@
           <div class="notifications p-4 border-bottom w-100" style="border-color:#eee;">
             <h4 class="text-right">اطلاعات اجرا</h4>
             <div class="w-100 details d-flex flex-row-reverse flex-wrap">
-              <div class="detail d-flex flex-row-reverse p-3 flex-grow-0" style="max-width:33%;">
+              <div class="detail d-flex flex-row-reverse p-3 col-xs-12 col-md-6 col-lg-4" >
                 <svg
                   height="30"
                   class="flex-shrink-0"
@@ -139,7 +142,7 @@
                   <p class="small">2 ساعت و 30 دقیفه ، شامل یک وقفه</p>
                 </div>
               </div>
-              <div class="detail d-flex flex-row-reverse p-3" style="max-width:33%;">
+              <div class="detail d-flex flex-row-reverse p-3 col-xs-12 col-md-6 col-lg-4" >
                 <svg
                   height="30"
                   class="flex-shrink-0"
@@ -162,7 +165,7 @@
                   <p class="small">کودکان کوچکتر از 4 سال اجازه ورود ندارند</p>
                 </div>
               </div>
-              <div class="detail d-flex flex-row-reverse p-3" style="max-width:33%;">
+              <div class="detail d-flex flex-row-reverse p-3 col-xs-12 col-md-6 col-lg-4" >
                 <svg
                   height="30"
                   class="flex-shrink-0"
@@ -184,7 +187,7 @@
                   <p class="small">استفاده از تفنگ رعد و برق و مه مصنوعی و دود مصنوعی</p>
                 </div>
               </div>
-              <div class="detail d-flex flex-row-reverse p-3" style="max-width:33%;">
+              <div class="detail d-flex flex-row-reverse p-3 col-xs-12 col-md-6 col-lg-4" >
                 <svg
                   height="30"
                   class="flex-shrink-0"
@@ -213,9 +216,64 @@
               </div>
             </div>
           </div>
-          <div class=" text-right story p-4">
-            <h4 class="text-right">داستان</h4>
-            <p> شیسبشیسب شیسب شسیب شیسب سشی بشیس بش یسب شسیب شس یب شیس بش یسب شیس ب شیسب شسی ب شسیب شیس ب شسی بش سیب شیس ب شسیب شیس ب شسیب شیس ب شیس بش یسب شیسبنشیستمکبکشمیسنتبمشکیسنتب کشیسنمتبکشمتیسبکمشیستب</p>
+          <div class="text-right story p-4">
+            <h4>داستان</h4>
+            <p>شیسبشیسب شیسب شسیب شیسب سشی بشیس بش یسب شسیب شس یب شیس بش یسب شیس ب شیسب شسی ب شسیب شیس ب شسی بش سیب شیس ب شسیب شیس ب شسیب شیس ب شیس بش یسب شیسبنشیستمکبکشمیسنتبمشکیسنتب کشیسنمتبکشمتیسبکمشیستب</p>
+            <h4>دسته بندی ها</h4>
+            <div class="cats d-flex flex-wrap flex-row-reverse mb-5">
+              <div
+                style="min-width:100px; "
+                class="m-2 text-center cat rounded-pill shadow font-weight-bold text-primary px-2 py-1"
+                v-for="i in ['نمایش','موزیکال','کلاسیک','درام','برنده']"
+                :key="i"
+              >{{i}}</div>
+            </div>
+            <h4>نقد</h4>
+            <p>شیسبشیسب شیسب شسیب شیسب سشی بشیس بش یسب شسیب شس یب شیس بش یسب شیس ب شیسب شسی ب شسیب شیس ب شسی بش سیب شیس ب شسیب شیس ب شسیب شیس ب شیس بش یسب شیسبنشیستمکبکشمیسنتبمشکیسنتب کشیسنمتبکشمتیسبکمشیستب</p>
+          </div>
+        </div>
+      </div>
+      <div class="castandcrew d-flex flex-column flex-sm-row py-3 container border-bottom" style="border-color:#eee">
+        <div class="casts cac text-right" style="width:50%;">
+          <h5>بازیگران</h5>
+          <div class="people">
+            <div
+              v-for="(p,i) in [{title:'نقش اول',names:'علی'},{title:'نقش اول',names:'علی'},{title:'نقش اول',names:'علی'}]"
+              class="py-3 d-flex flex-row-reverse"
+              :key="i"
+            >
+            <div class="name flex-grow-1 d-flex flex-column">
+            <div class="text-secondary font-weight-bold">{{p.title}}</div>
+            <div class="text-dark font-weight-bold">{{p.names}}</div>
+            </div>
+            <div class="imagecontainer rounded-circle border-light overflow-hidden" style="box-shadow:grey 0px 3px 10px 2px;border-width:5px">
+              <img src="img/temps/show-actor.jpg" width="50px" height="50px" alt="">
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="creative cac text-right" style="width:50%;">
+          <h5 class="mb-3">سازندگان</h5>
+          <div class="people">
+            <div
+              v-for="(p,i) in [{title:'موسیقی',names:'علی'},{title:']اهنگ',names:'علی'},{title:'کارگردان',names:'علی'}]"
+              class="py-3"
+              :key="i"
+            >
+            <div class="text-secondary font-weight-bold">{{p.title}}</div>
+            <div class="text-dark font-weight-bold">{{p.names}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="related text-right container py-3">
+        <h5>موارد مرتبط</h5>
+        <div class="items d-flex overflow-auto " >
+          <div class="item flex-shrink-0 shadow  m-3" v-for="i in 19" :key="i">
+            <img src="img/temps/show-related.jpg" height="150px" width="200px;" alt="">
+            <p style="font-size:13px; font-weight:bold;height:150px;width:200px;padding:10px;overflow:hidden;">
+              شیسبشیس بش سیب شسیب شس یب شسی بشیس ب شیس ب شیسب شیس ب شیسب asdf a dsfa dsf adsf a dsf asdf sad f adsf ads f asdf  شیس ب شیس ب شیسب
+            </p>
           </div>
         </div>
       </div>

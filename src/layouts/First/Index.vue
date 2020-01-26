@@ -1,8 +1,8 @@
 <template>
   <div id="app" >
-    <Header class="container" />
+    <Header class="" />
     <router-view style="min-height:300px;color:white;" />
-    <Footer class="container"/>
+    <Footer class=""/>
     <LoginSignup v-if="loginvis" @hide="loginvis=false"/>
   </div>
 </template>
