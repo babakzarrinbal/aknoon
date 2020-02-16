@@ -1,7 +1,7 @@
 <template>
   <div
     class="position-relative bg-dark overflow-hidden"
-    :style="'z-index:9999;width:100%;height:calc(100vh - '+height+'px);'"
+    :style="'z-index:998;width:100%;height:calc(100vh - '+height+'px);'"
     ref="container"
   >
     <transition-group name="slideup">

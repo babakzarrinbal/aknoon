@@ -59,12 +59,12 @@
           </div>
         </div>
         <div
-          class="buyticket bg-dark rounded d-flex flex-column p-3"
-          style="width:250px;border:1px solid gray;"
+          class="buyticket   d-flex flex-column p-3"
+          style="width:250px;background-color:#222;border:1px solid #222; border-radius:7px"
         >
           <h6>قیمت بلیط از</h6>
           <span>{{show.startingPrice}} تومان</span>
-          <button class="btn-primary rounded mt-2 w-100 border-0" style="height:40px;">خرید بلیط</button>
+          <button class="btn-primary  mt-2 w-100 border-0" style="height:40px; border-radius:7px">خرید بلیط</button>
         </div>
       </div>
     </div>

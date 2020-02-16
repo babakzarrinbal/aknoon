@@ -1,30 +1,25 @@
 <template>
-  <div id="loginsignup" @click="$emit('hide')" >
+  <div id="loginsignup" @click="$emit('hide')">
     <div class="bzmodal p-4 bg-light" @click.stop>
       <div class="mt-4" v-if="login">
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text">User</span>
           </div>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="نام کاربری"
-          />
+          <input type="text" class="form-control" placeholder="نام کاربری" />
         </div>
         <div class="input-group mb-1">
           <div class="input-group-prepend">
-            <span class="input-group-text" >Pass</span>
+            <span class="input-group-text">Pass</span>
           </div>
-          <input
-            type="password"
-            class="form-control"
-            placeholder="پسورد"
-          />
+          <input type="password" class="form-control" placeholder="پسورد" />
         </div>
-        
+
         <div class="form-group">
-          <button  @click="$emit('hide')" class=" mt-3 btn btn-primary btn-lg btn-block login-btn">ورود</button>
+          <button
+            @click="$emit('hide')"
+            class="mt-3 btn btn-primary btn-lg btn-block login-btn"
+          >ورود</button>
         </div>
         <div class="btn btn-link" @click="login=false">عضویت</div>
       </div>
@@ -33,35 +28,26 @@
           <div class="input-group-prepend">
             <span class="input-group-text">User</span>
           </div>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="نام کاربری"
-          />
+          <input type="text" class="form-control" placeholder="نام کاربری" />
         </div>
         <div class="input-group mb-1">
           <div class="input-group-prepend">
-            <span class="input-group-text" >Pass</span>
+            <span class="input-group-text">Pass</span>
           </div>
-          <input
-            type="password"
-            class="form-control"
-            placeholder="پسورد"
-          />
+          <input type="password" class="form-control" placeholder="پسورد" />
         </div>
         <div class="input-group mb-1">
           <div class="input-group-prepend">
-            <span class="input-group-text" >Pass</span>
+            <span class="input-group-text">Pass</span>
           </div>
-          <input
-            type="password"
-            class="form-control"
-            placeholder="ورود مجدد پسورد"
-          />
+          <input type="password" class="form-control" placeholder="ورود مجدد پسورد" />
         </div>
-        
+
         <div class="form-group">
-          <button  @click="$emit('hide')" class=" mt-3 btn btn-primary btn-lg btn-block login-btn">عضویت</button>
+          <button
+            @click="$emit('hide')"
+            class="mt-3 btn btn-primary btn-lg btn-block login-btn"
+          >عضویت</button>
         </div>
         <div class="btn btn-link" @click="login=true">ورود</div>
       </div>
@@ -71,16 +57,16 @@
 
 <script>
 export default {
-  data(){
-    return{
-      login:true,
-    }
+  data() {
+    return {
+      login: true
+    };
   },
   created() {
     window.document.body.style.overflow = "hidden";
   },
   beforeDestroy() {
-    window.document.body.style.overflow = "";
+    if (this.$route.name != "VisualArt") window.document.body.style.overflow = "";
   }
 };
 </script>
@@ -99,8 +85,8 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  .bzmodal{
-    box-shadow: #0e0e0e 0 0 9px 3px ;
+  .bzmodal {
+    box-shadow: #0e0e0e 0 0 9px 3px;
   }
 }
 </style>

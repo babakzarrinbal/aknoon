@@ -1,5 +1,5 @@
 <template>
-  <div class="w-100 p-0" style="margin-left:-15px;margin-right:-15px;width: calc(100% + 30px) !important;">
+  <div class="w-100 p-0" >
     <vue-flux :options="vfOptions" :images="images" :transitions="vfTransitions" ref="slider">
       <template v-slot:preloader>
         <flux-preloader />
@@ -32,10 +32,11 @@ export default {
       autoplay: true
     },
     vfTransitions: [
+      'Swipe'
       // "fade", 
-      "cube",
+      // "cube",
       //  "book",
-      "wave"
+      // "wave"
     ],
   })
 };
@@ -43,7 +44,7 @@ export default {
 
 <style lang="scss" scoped>
 /deep/ .vue-flux {
-  height: 200px !important;
+  height: 250px !important;
   .flux-pagination li {
     margin: 0 5px !important;
     width: 13px !important;

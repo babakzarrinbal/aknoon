@@ -75,13 +75,18 @@ export default {
 }
 .hoverabletext {
   &:hover {
-    transform: translateY(-2px);
-    text-shadow: -1px 5px 2px #b3b1b1;
+    // transform: translateY(-2px);
+    // text-shadow: -1px 5px 2px #b3b1b1;
+    a{
+    color:#ffffff9f !important;
+      
+    }
   }
   &.router-link-exact-active {
-    transform: translateY(-2px);
-    text-shadow: -1px 5px 2px white;
+    // transform: translateY(-2px);
+    // text-shadow: -1px 5px 2px white;
     a {
+    color:#ffffff63 !important;
       font-weight: 900;
     }
   }

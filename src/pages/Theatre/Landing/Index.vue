@@ -1,11 +1,13 @@
 <template>
-  <div class="container" style="background-color:#2b2b2b">
-    <Slider :images="slideImages" />
-    <div class="container">
+  <div class="container-fluid px-0" style="background-color:#2b2b2b">
+    <Slider class="pt-5 " :images="slideImages" />
+    <div class="container ">
       <Booking />
       <Listing :shows="list1shows" />
-      <div class="banner" v-if="banners && banners.length">
-        <img :src="banners[0]" style="width:500px;max-width:100%;" alt />
+      <div class="banner position-relative" v-if="banners && banners.length" @mouseenter="changebanner(true)" @mouseleave="changebanner(false)">
+        <transition name="fade" mode="out-in">
+        <img :key="exbanner" :src="exbanner" style="width:500px;max-width:100%;" alt />
+        </transition>
       </div>
     </div>
     <Listing2 :banners="banners" :shows="list2shows" :ratings="ratings" class="text-dark" />
@@ -31,7 +33,8 @@ export default {
       list1shows: [],
       slideImages: [],
       banners: [],
-      list2shows: []
+      list2shows: [],
+      exbanner:"img/temps/banner.jpg"
     };
   },
   created() {
@@ -102,6 +105,12 @@ export default {
       ],
       []
     );
+  },
+  methods:{
+    changebanner(expand){
+      this.exbanner = expand ? "img/temps/expanded-ad.jpg" : "img/temps/banner.jpg"
+      window.console.log(this.exbanner);
+    }
   }
 };
 </script>

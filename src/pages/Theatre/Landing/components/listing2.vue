@@ -7,11 +7,11 @@
         <h5 class="text-bold" style="background-color: #cccccc;padding: 8px 5px;">دسته‌بندی‌ها</h5>
         <div class="cats d-flex flex-wrap flex-row-reverse">
           <span
-            class="px-2 py-1 m-2 clickable btn border border-primary"
+            class="px-2 py-1 m-2 clickable btn border border-secondary"
             style="font-size:13px;color:initial;"
             v-for="(v,i) in cats"
             :key="i"
-            :class="{'btn-success':v==activeCat,'btn-warning':v!=activeCat}"
+            :class="{'btn-secondary':v==activeCat,'btn-light':v!=activeCat}"
             @click="activeCat = v"
           >{{v}}</span>
         </div>
@@ -44,14 +44,14 @@
           class="show d-flex flex-column m-2"
           v-for="(v,i) in visibleshows.slice(0,4)"
           :key="i"
-          style="border:2px solid yellow;width:300px; "
+          style="border:2px solid transparent;width:300px; "
         >
           <img
             :src="'img/temps/2-'+(i+1)+'.jpg'"
             alt
-            style="border-bottom:2px solid yellow;width:296px"
+            style="border-bottom:2px solid transparent;width:296px"
           />
-          <div>
+          <div class="text-center">
             خلاصه مطلب در اینجا قرار میگیرد
             خلاصه مطلب در اینجا قرار میگیرد
           </div>
@@ -65,14 +65,14 @@
           class="show d-flex flex-column m-2"
           v-for="(v,i) in visibleshows.slice(4,8)"
           :key="i"
-          style="border:2px solid yellow;width:300px;"
+          style="border:2px solid transparent;width:300px;"
         >
           <img
             :src="'img/temps/2-'+(i+5)+'.jpg'"
             alt
-            style="border-bottom:2px solid yellow;width:296px"
+            style="border-bottom:2px solid transparent;width:296px"
           />
-          <div>
+          <div class="text-center">
             خلاصه مطلب در اینجا قرار میگیرد
             خلاصه مطلب در اینجا قرار میگیرد
           </div>
@@ -149,7 +149,7 @@ export default {
   }
   .show {
     &:hover {
-      transform: translateY(-2px);
+      // transform: translateY(-2px);
       box-shadow: 0 2px 5px gray;
     }
   }

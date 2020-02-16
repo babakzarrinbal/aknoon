@@ -11,99 +11,121 @@
         >{{sc}}</div>
       </div>
       <div class="shows">
-        <div class="show" v-for="(s,i) in visibleshows" :key="i">
-          <div class="inner">
+        <div class="show col-xs-6 col-sm-4 col-md-3 px-0" v-for="(s,i) in visibleshows" :key="i">
+          <router-link tag="div" :to="'theatre/shows/'+s.id" class="inner">
             <div class="front">
               <img :src="s.img" alt="Avatar" style="width:100%;height:100%;" />
             </div>
-            <router-link tag="div" :to="'theatre/shows/'+s.id" class="back d-flex flex-column">
+            <div class="back d-flex flex-column">
               <div class="showinfo">
                 <span class="text-center text">{{s.title}}</span>
-                <img class="shimg" src="img/temps/i-1.jpg" alt="">
+                <img class="shimg" src="img/temps/i-1.jpg" alt />
               </div>
               <div class="showinfo">
                 <span class="text-center text">{{s.writer}}</span>
-                <img class="shimg" src="img/temps/i-2.jpg" alt="">
+                <img class="shimg" src="img/temps/i-2.jpg" alt />
               </div>
               <div class="showinfo">
                 <span class="text-center text">{{s.director}}</span>
-                <img class="shimg" src="img/temps/i-3.jpg" alt="">
+                <img class="shimg" src="img/temps/i-3.jpg" alt />
               </div>
               <div class="showinfo">
                 <span class="text-center text">{{s.place}}</span>
-                <img class="shimg" src="img/temps/i-4.jpg" alt="">
+                <img class="shimg" src="img/temps/i-4.jpg" alt />
               </div>
               <div class="showinfo">
                 <span class="text-center text">{{s.datetime}}</span>
-                <img class="shimg" src="img/temps/i-5.jpg" alt="">
+                <img class="shimg" src="img/temps/i-5.jpg" alt />
               </div>
-              <div class="ratings d-flex mt-1">
-                <div class="rate d-flex  flex-grow-1  mr-1">
-                  <img src="" alt="" style="width:20px;height:20px;background:gray;" class="rateimg">
+            </div>
+              <div class="ratings d-flex mt-1 position-absolute" style="bottom:5px;left:5px;right:5px;">
+                <div class="rate d-flex flex-grow-1 mr-1">
+                  <img src alt style="width:20px;height:20px;background:gray;" class="rateimg" />
                   <div class="info d-flex flex-column flex-grow-1">
                     <span style="text-align:left;font-size:10px;line-height:10px">{{s.rate1}}</span>
-                    <div class="position-relative " style="height:10px; border-radius:5px;border:1px solid gray;">
-                      <div class="" style="position:absolute;top:0;bottom:0;left:0;background:orange" :style="{width:((parseFloat(s.rate1)||0)/0.1)+'%'}"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="rate d-flex  flex-grow-1  mr-1">
-                  <img src="" alt="" style="width:20px;height:20px;background:gray;" class="rateimg">
-                  <div class="info d-flex flex-column flex-grow-1 ali">
-                    <span style="text-align:left;font-size:10px;line-height:10px">{{s.rate2}}</span>
-                    <div class="position-relative " style="height:10px; border-radius:5px;border:1px solid gray;">
-                      <div class="" style="position:absolute;top:0;bottom:0;left:0;background:orange" :style="{width:((parseFloat(s.rate2)||0)/0.1)+'%'}"></div>
+                    <div
+                      class="position-relative"
+                      style="height:10px; border-radius:5px;border:1px solid gray;"
+                    >
+                      <div
+                        class
+                        style="position:absolute;top:0;bottom:0;left:0;background:orange"
+                        :style="{width:((parseFloat(s.rate1)||0)/0.1)+'%'}"
+                      ></div>
                     </div>
                   </div>
                 </div>
                 <div class="rate d-flex flex-grow-1 mr-1">
-                  <img src="" alt="" style="width:20px;height:20px;background:gray;" class="rateimg">
+                  <img src alt style="width:20px;height:20px;background:gray;" class="rateimg" />
+                  <div class="info d-flex flex-column flex-grow-1 ali">
+                    <span style="text-align:left;font-size:10px;line-height:10px">{{s.rate2}}</span>
+                    <div
+                      class="position-relative"
+                      style="height:10px; border-radius:5px;border:1px solid gray;"
+                    >
+                      <div
+                        class
+                        style="position:absolute;top:0;bottom:0;left:0;background:orange"
+                        :style="{width:((parseFloat(s.rate2)||0)/0.1)+'%'}"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="rate d-flex flex-grow-1 mr-1">
+                  <img src alt style="width:20px;height:20px;background:gray;" class="rateimg" />
                   <div class="info d-flex flex-column flex-grow-1">
                     <span style="text-align:left;font-size:10px;line-height:10px">{{s.rate3}}</span>
-                    <div class="position-relative " style="height:10px; border-radius:5px;border:1px solid gray;">
-                      <div class="" style="position:absolute;top:0;bottom:0;left:0;background:orange" :style="{width:((parseFloat(s.rate3)||0)/0.1)+'%'}"></div>
+                    <div
+                      class="position-relative"
+                      style="height:10px; border-radius:5px;border:1px solid gray;"
+                    >
+                      <div
+                        class
+                        style="position:absolute;top:0;bottom:0;left:0;background:orange"
+                        :style="{width:((parseFloat(s.rate3)||0)/0.1)+'%'}"
+                      ></div>
                     </div>
                   </div>
                 </div>
               </div>
-            </router-link>
-          </div>
+          </router-link>
         </div>
       </div>
     </div>
-    <div class="more clickable"  @click="showall=!showall">{{showall?"کمتر":"بیشتر"}}</div>
+    <div class="more clickable" @click="showall=!showall">{{showall?"کمتر":"بیشتر"}}</div>
   </div>
 </template>
 
 <script>
 export default {
-  props:{
-    shows:Array
+  props: {
+    shows: Array
   },
   data() {
-    
     return {
       activeCat: "همه اجراها",
       showall: false
     };
   },
-  computed:{
-    showCats(){
+  computed: {
+    showCats() {
       return this.shows.reduce(
-      (cu, show) =>{ 
-        show.categories.forEach(c => {
-          if(cu.includes(c))return;
-          cu.push(c);
-        });
+        (cu, show) => {
+          show.categories.forEach(c => {
+            if (cu.includes(c)) return;
+            cu.push(c);
+          });
 
-        return cu;
+          return cu;
         },
-      ["همه اجراها"]
-    )
+        ["همه اجراها"]
+      );
     },
-    visibleshows(){
-      if(this.activeCat == 'همه اجراها')return {...this.shows}
-      return this.shows.filter(s => s.categories.some(c=>c==this.activeCat) );
+    visibleshows() {
+      if (this.activeCat == "همه اجراها") return { ...this.shows };
+      return this.shows.filter(s =>
+        s.categories.some(c => c == this.activeCat)
+      );
     }
   }
 };
@@ -112,10 +134,11 @@ export default {
 <style lang='scss' scoped>
 .wholelist {
   position: relative;
-  height: 500px;
+  max-height: 500px;
   overflow: hidden;
   margin-left: -15px;
   margin-right: -15px;
+  transition: 0.5s;
 
   &:after {
     content: "";
@@ -132,7 +155,8 @@ export default {
     &:after {
       height: 0;
     }
-    height: auto;
+    max-height: 3000px;
+    transition: 0.5s;
   }
 }
 .catselect {
@@ -158,10 +182,12 @@ export default {
     background-color: transparent;
     width: 170px;
     height: 170px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-    &:hover .inner {
-      transform: rotateY(180deg);
+    border: 1px solid #8b89895b;
+    @media (min-width: 992px){
+      height: 232.5px;;
+    }
+    &:hover .inner .back {
+      transform: translateX(0);
     }
     .inner {
       position: relative;
@@ -170,6 +196,7 @@ export default {
       text-align: center;
       transition: transform 0.4s;
       transform-style: preserve-3d;
+      overflow:hidden;
       .front,
       .back {
         position: absolute;
@@ -182,43 +209,43 @@ export default {
       .front {
         background-color: #bbb;
         color: white;
-
       }
 
       /* Style the back side */
       .back {
         background-color: #f4cc30;
         color: black;
-        transform: rotateY(-180deg);
-        padding-top:2px;
-        .showinfo{
+        transform: translateX(100%);
+        padding-top: 2px;
+        transition:0.4s;
+        .showinfo {
           font-size: 12px;
-          margin:3px 8px;
+          margin: 3px 8px;
           border-radius: 7px;
           border: 1px solid white;
-          display:flex;
-          .text{
-            flex-grow:1;
+          display: flex;
+          .text {
+            flex-grow: 1;
           }
-          .shimg{
-            border-left:1px solid white;
-            width:20px;
-            height:20px;
-            padding:3px;
+          .shimg {
+            border-left: 1px solid white;
+            width: 20px;
+            height: 20px;
+            padding: 3px;
           }
         }
       }
     }
   }
 }
-.more{
+.more {
   background-color: #f4cc30;
-  color:black;
-  width:450px;
+  color: black;
+  width: 450px;
   font-weight: bold;
   font-size: 18px;
-  margin:10px auto;
-  padding:8px 10px;
-    background: radial-gradient(circle,#f4cc30 ,transparent 50%);
+  margin: 10px auto;
+  padding: 8px 10px;
+  background: radial-gradient(circle, #f4cc30, transparent 50%);
 }
 </style>
