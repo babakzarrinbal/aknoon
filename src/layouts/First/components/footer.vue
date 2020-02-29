@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid d-flex footer row">
+  <div class="container-fluid d-flex footer">
     <div class="col-12 col-sm-4">
       <div class="link clickable" v-for="(l,i) in footerLinksLeft" :key="i" :class="l.type">
         <img :src="l.icon" v-if="l.icon" alt />

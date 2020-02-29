@@ -1,4 +1,4 @@
-importScripts("/aknoon/precache-manifest.fe001822e9cf8f81ff5947e33b939e25.js", "/aknoon/workbox-v4.3.1/workbox-sw.js");
+importScripts("/aknoon/precache-manifest.9975e1b1fcbadfe4f10a313b33e75f32.js", "/aknoon/workbox-v4.3.1/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "/aknoon/workbox-v4.3.1"});
 workbox.setConfig({ modulePathPrefix: "/aknoon/workbox-v4.3.1", debug: false });
 workbox.core.skipWaiting();
