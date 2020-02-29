@@ -41,16 +41,12 @@
     <div class="shows-firstpart">
       <div class="shows mt-5 d-flex flex-row-reverse flex-wrap">
         <div
-          class="show d-flex flex-column m-2"
+          class="show clickable d-flex flex-column m-2"
           v-for="(v,i) in visibleshows.slice(0,4)"
           :key="i"
           style="border:2px solid transparent;width:300px; "
         >
-          <img
-            :src="'img/temps/2-'+(i+1)+'.jpg'"
-            alt
-            style="border-bottom:2px solid transparent;width:296px"
-          />
+          <img :src="'img/temps/2-'+(i+1)+'.jpg'" alt />
           <div class="text-center">
             خلاصه مطلب در اینجا قرار میگیرد
             خلاصه مطلب در اینجا قرار میگیرد
@@ -62,16 +58,12 @@
       </div>
       <div class="shows mt-5 d-flex flex-row-reverse flex-wrap">
         <div
-          class="show d-flex flex-column m-2"
+          class="show  clickable d-flex flex-column m-2"
           v-for="(v,i) in visibleshows.slice(4,8)"
           :key="i"
           style="border:2px solid transparent;width:300px;"
         >
-          <img
-            :src="'img/temps/2-'+(i+5)+'.jpg'"
-            alt
-            style="border-bottom:2px solid transparent;width:296px"
-          />
+          <img :src="'img/temps/2-'+(i+5)+'.jpg'" alt />
           <div class="text-center">
             خلاصه مطلب در اینجا قرار میگیرد
             خلاصه مطلب در اینجا قرار میگیرد
@@ -148,9 +140,19 @@ export default {
     }
   }
   .show {
+    img {
+      transition: 0.3s;
+      padding: 4px;
+      border: solid #bbbaba 1px;
+      width: 296px;
+    }
+    transition: 0.3s;
     &:hover {
+      img {
+        filter: brightness(0.7);
+      }
       // transform: translateY(-2px);
-      box-shadow: 0 2px 5px gray;
+      // box-shadow: 0 2px 5px gray;
     }
   }
 }

@@ -239,13 +239,18 @@ export default {
   }
 }
 .more {
-  background-color: #f4cc30;
-  color: black;
+  background-color: #0068d9;
+  color: white;
   width: 450px;
   font-weight: bold;
   font-size: 18px;
   margin: 10px auto;
   padding: 8px 10px;
-  background: radial-gradient(circle, #f4cc30, transparent 50%);
+  background: radial-gradient(circle, #0068d9, transparent 50%);
+  &:hover{
+    color:white;
+  background: radial-gradient(circle, #024c9b, transparent 50%);
+
+  }
 }
 </style>

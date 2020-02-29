@@ -2,7 +2,7 @@
   <div id="app" >
     <Header class="" />
     <router-view style="min-height:300px;color:white;" />
-    <Footer class=""/>
+    <Footer class="" :footerLinksLeft="footerLinksLeft" :footerLinksMiddle="footerLinksMiddle" :footerLinksRight="footerLinksRight" />
     <LoginSignup v-if="loginvis" @hide="loginvis=false"/>
   </div>
 </template>
@@ -19,11 +19,44 @@ export default {
   },
   data() {
     return {
-      loginvis: false
+      loginvis: false,
+      footerLinksRight:[],
+      footerLinksMiddle:[],
+      footerLinksLeft:[],
     };
   },
   created() {
     this.EventBus.$on("showlogin", () => (this.loginvis = true));
+    this.footerLinksRight=this.footerLinksLeft=this.footerLinksMiddle = [
+      {
+        text:'لینک تست',
+        href:"",
+        type:"bold",
+      },
+      {
+        text:'لینک تست',
+        href:"",
+        type:"button",
+      },
+      {
+        text:'لینک تست',
+        href:"",
+        type:"",
+        icon:"question",
+      },
+      {
+        text:'لینک تست',
+        href:"",
+        type:"bold",
+        icon:'phone',
+      },
+      {
+        text:'لینک تست',
+        href:"",
+        type:"bold button",
+        icon:"mail",
+      },
+    ]
   }
 };
 </script>
